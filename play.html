@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Hidden Message</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+  <div class="app">
+
+    <header class="topbar">
+
+      <div class="brand">
+        Hidden<span>Message</span>
+      </div>
+
+      <div class="pill">
+        Player Mode
+      </div>
+
+    </header>
+
+
+    <main>
+
+      <section class="hero">
+
+        <div class="eyebrow">
+          Choose carefully
+        </div>
+
+        <h1 id="gameTitle">
+          Pick one paper.
+        </h1>
+
+        <p id="gameIntro">
+          There is one hidden message waiting for you.
+          Tap a paper to reveal it.
+        </p>
+
+      </section>
+
+
+      <section class="deck">
+
+        <div
+          class="cards"
+          id="cards"
+        ></div>
+
+      </section>
+
+
+      <div
+        class="player-status"
+        id="status"
+      ></div>
+
+
+      <div
+        class="result hidden"
+        id="result"
+      ></div>
+
+    </main>
+
+
+    <footer class="footer">
+      One choice. One reveal. No second pick.
+    </footer>
+
+  </div>
+
+
+  <script src="js/shared.js"></script>
+  <script src="js/player.js"></script>
+
+</body>
+</html>

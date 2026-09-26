@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Create Game · Hidden Message</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+  <div class="app">
+
+    <header class="topbar">
+
+      <a href="index.html" class="brand">
+        Hidden<span>Message</span>
+      </a>
+
+      <div class="pill">
+        Creator Mode
+      </div>
+
+    </header>
+
+
+    <main>
+
+      <section class="creator-header">
+
+        <div class="eyebrow">
+          Create your game
+        </div>
+
+        <h1>
+          What should they find?
+        </h1>
+
+        <p>
+          Put a different message inside each card.
+          Your player gets one choice.
+        </p>
+
+      </section>
+
+
+      <section class="creator-panel">
+
+        <div class="field">
+
+          <label for="gameTitle">
+            Game title
+          </label>
+
+          <input
+            id="gameTitle"
+            type="text"
+            maxlength="80"
+            placeholder="Birthday Surprise"
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="gameIntro">
+            Introduction
+          </label>
+
+          <textarea
+            id="gameIntro"
+            maxlength="250"
+            placeholder="Choose one paper carefully..."
+          ></textarea>
+
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            Number of cards
+          </label>
+
+          <div class="card-count">
+
+            <button
+              class="count-btn"
+              data-count="4"
+            >
+              4
+            </button>
+
+            <button
+              class="count-btn active"
+              data-count="5"
+            >
+              5
+            </button>
+
+            <button
+              class="count-btn"
+              data-count="6"
+            >
+              6
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="messages-header">
+
+          <div>
+
+            <h2>
+              Hidden messages
+            </h2>
+
+            <p>
+              Each card gets one message.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div
+          class="message-editor"
+          id="messageEditor"
+        ></div>
+
+
+        <div class="creator-actions">
+
+          <button
+            class="btn"
+            id="generateBtn"
+          >
+            Generate game link
+          </button>
+
+          <button
+            class="btn secondary"
+            id="previewBtn"
+          >
+            Preview
+          </button>
+
+        </div>
+
+
+        <section
+          class="share-box hidden"
+          id="shareBox"
+        >
+
+          <div class="share-success">
+            🎉 Your game is ready
+          </div>
+
+          <p>
+            Send this link to the person playing.
+          </p>
+
+          <div class="share-row">
+
+            <input
+              id="shareUrl"
+              readonly
+            >
+
+            <button
+              class="btn success"
+              id="copyBtn"
+            >
+              Copy link
+            </button>
+
+          </div>
+
+        </section>
+
+
+        <section
+          class="saved-games"
+          id="savedGamesSection"
+        >
+
+          <div class="saved-header">
+
+            <div>
+              <h2>My games</h2>
+
+              <p>
+                Saved in this browser only.
+              </p>
+            </div>
+
+            <button
+              class="btn danger-small"
+              id="clearGamesBtn"
+            >
+              Clear
+            </button>
+
+          </div>
+
+
+          <div
+            id="savedGames"
+            class="saved-list"
+          ></div>
+
+        </section>
+
+      </section>
+
+    </main>
+
+
+    <footer class="footer">
+      Games are stored locally in your browser.
+    </footer>
+
+  </div>
+
+
+  <script src="js/shared.js"></script>
+  <script src="js/creator.js"></script>
+
+</body>
+</html>

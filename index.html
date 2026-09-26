@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Hidden Message</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="app">
+
+    <header class="topbar">
+      <div class="brand">
+        Hidden<span>Message</span>
+      </div>
+
+      <div class="pill">
+        No account required
+      </div>
+    </header>
+
+
+    <main class="home">
+
+      <div class="eyebrow">
+        One choice. One reveal.
+      </div>
+
+      <h1>
+        Hide a message.<br>
+        Make them choose.
+      </h1>
+
+      <p class="home-description">
+        Create a little card game, hide your messages inside,
+        and send someone a link. They get one choice.
+      </p>
+
+
+      <div class="home-actions">
+
+        <a href="create.html" class="btn large">
+          Create a game
+        </a>
+
+        <button class="btn secondary large" id="howBtn">
+          How it works
+        </button>
+
+      </div>
+
+
+      <section class="how hidden" id="howSection">
+
+        <div class="how-card">
+          <div class="how-number">1</div>
+
+          <h3>Create</h3>
+
+          <p>
+            Write your hidden messages and choose
+            how many cards you want.
+          </p>
+        </div>
+
+
+        <div class="how-card">
+          <div class="how-number">2</div>
+
+          <h3>Share</h3>
+
+          <p>
+            Generate a private game link and send
+            it to your person.
+          </p>
+        </div>
+
+
+        <div class="how-card">
+          <div class="how-number">3</div>
+
+          <h3>Reveal</h3>
+
+          <p>
+            They choose one card and reveal
+            their hidden message.
+          </p>
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <footer class="footer">
+      Hidden Message · No database required
+    </footer>
+
+  </div>
+
+
+  <script>
+
+    const howBtn = document.getElementById("howBtn");
+    const howSection = document.getElementById("howSection");
+
+    howBtn.addEventListener("click", () => {
+
+      howSection.classList.toggle("hidden");
+
+      howBtn.textContent =
+        howSection.classList.contains("hidden")
+          ? "How it works"
+          : "Hide explanation";
+
+    });
+
+  </script>
+
+</body>
+</html>
