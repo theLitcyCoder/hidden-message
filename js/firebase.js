@@ -7,7 +7,7 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/12.2.1/firebase
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBxUEnZEKuWWNdnmxwXJGXpb2WSbr6WVXg",
+  apiKey: "YOUR_API_KEY",
   authDomain: "hidden-message-c357e.firebaseapp.com",
   projectId: "hidden-message-c357e",
   storageBucket: "hidden-message-c357e.firebasestorage.app",
