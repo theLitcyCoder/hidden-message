@@ -1,9 +1,39 @@
+import { signInAnonymously } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
+import { auth } from "./firebase.js";
+
+export async function ensureAnonymousUser() {
+  if (auth.currentUser) {
+    return auth.currentUser;
+  }
+
+  const result = await signInAnonymously(auth);
+
+  return result.user;
+}
+
 let cardCount = 5;
 
 
 /* -----------------------------------
    ELEMENTS
 ----------------------------------- */
+
+const user = await ensureAnonymousUser();
+
+const game = {
+  creatorId: user.uid,
+  title: title,
+  intro: intro,
+  cards: cards,
+  createdAt: serverTimestamp()
+};
+
+const gameRef = await addDoc(
+  collection(db, "games"),
+  game
+);
+
+const gameId = gameRef.id;
 
 const gameTitle =
   document.getElementById("gameTitle");
