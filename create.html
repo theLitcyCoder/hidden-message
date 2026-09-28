@@ -36,6 +36,10 @@
 
     <main>
 
+      <!-- ================================
+           CREATE GAME
+      ================================= -->
+
       <section class="creator-header">
 
         <div class="eyebrow">
@@ -56,6 +60,8 @@
 
       <section class="creator-panel">
 
+        <!-- GAME TITLE -->
+
         <div class="field">
 
           <label for="gameTitle">
@@ -72,6 +78,8 @@
         </div>
 
 
+        <!-- GAME INTRO -->
+
         <div class="field">
 
           <label for="gameIntro">
@@ -87,6 +95,8 @@
         </div>
 
 
+        <!-- CARD COUNT -->
+
         <div class="field">
 
           <label>
@@ -98,6 +108,7 @@
             <button
               class="count-btn"
               data-count="4"
+              type="button"
             >
               4
             </button>
@@ -105,6 +116,7 @@
             <button
               class="count-btn active"
               data-count="5"
+              type="button"
             >
               5
             </button>
@@ -112,6 +124,7 @@
             <button
               class="count-btn"
               data-count="6"
+              type="button"
             >
               6
             </button>
@@ -120,6 +133,8 @@
 
         </div>
 
+
+        <!-- HIDDEN MESSAGES -->
 
         <div class="messages-header">
 
@@ -144,11 +159,14 @@
         ></div>
 
 
+        <!-- ACTIONS -->
+
         <div class="creator-actions">
 
           <button
             class="btn"
             id="generateBtn"
+            type="button"
           >
             Generate game link
           </button>
@@ -156,12 +174,15 @@
           <button
             class="btn secondary"
             id="previewBtn"
+            type="button"
           >
             Preview
           </button>
 
         </div>
 
+
+        <!-- SHARE LINK -->
 
         <section
           class="share-box hidden"
@@ -186,6 +207,7 @@
             <button
               class="btn success"
               id="copyBtn"
+              type="button"
             >
               Copy link
             </button>
@@ -194,38 +216,53 @@
 
         </section>
 
+      </section>
 
-        <section
-          class="saved-games"
-          id="savedGamesSection"
+
+      <!-- ================================
+           MY CREATED GAMES
+      ================================= -->
+
+      <section class="creator-panel">
+
+        <div class="eyebrow">
+          Your games
+        </div>
+
+        <h2>
+          My Created Games
+        </h2>
+
+        <p>
+          See your games and the anonymous choices
+          players have made.
+        </p>
+
+
+        <!-- Loading -->
+
+        <div
+          id="gamesLoading"
+          class="empty"
         >
-
-          <div class="saved-header">
-
-            <div>
-              <h2>My games</h2>
-
-              <p>
-                Saved in this browser only.
-              </p>
-            </div>
-
-            <button
-              class="btn danger-small"
-              id="clearGamesBtn"
-            >
-              Clear
-            </button>
-
-          </div>
+          Loading your games...
+        </div>
 
 
-          <div
-            id="savedGames"
-            class="saved-list"
-          ></div>
+        <!-- Error -->
 
-        </section>
+        <div
+          id="gamesError"
+          class="empty hidden"
+        ></div>
+
+
+        <!-- Firebase games appear here -->
+
+        <div
+          id="savedGames"
+          class="saved-list"
+        ></div>
 
       </section>
 
@@ -233,14 +270,17 @@
 
 
     <footer class="footer">
-      Games are stored locally in your browser.
+      Your games and player results are securely stored in Firebase.
     </footer>
 
   </div>
 
 
-  <script src="js/shared.js"></script>
-  <script src="js/creator.js"></script>
+  <script
+    type="module"
+    src="js/creator.js"
+  ></script>
 
 </body>
+
 </html>

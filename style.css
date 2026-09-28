@@ -1348,3 +1348,194 @@ textarea:focus {
   }
 
 }
+
+/* ================================
+   DASHBOARD RESULTS
+================================ */
+
+.creator-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.game-results {
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.results-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 14px;
+}
+
+.results-header h4 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.result-count {
+  font-size: 13px;
+  opacity: 0.65;
+}
+
+.results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.result-row {
+  display: grid;
+  grid-template-columns: 1.4fr 0.7fr 2fr 1fr;
+  gap: 16px;
+  align-items: center;
+
+  padding: 14px;
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.7);
+
+  border: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.result-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.55;
+  margin-bottom: 4px;
+}
+
+.result-player code {
+  font-size: 11px;
+  word-break: break-all;
+}
+
+.result-card strong {
+  font-size: 15px;
+}
+
+.result-message {
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.result-time {
+  font-size: 12px;
+  opacity: 0.6;
+  text-align: right;
+}
+
+.result-empty {
+  padding: 20px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 760px) {
+
+  .result-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .result-message {
+    grid-column: 1 / -1;
+  }
+
+  .result-time {
+    text-align: left;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .creator-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .result-row {
+    grid-template-columns: 1fr;
+  }
+
+  .result-message {
+    grid-column: auto;
+  }
+
+}
+
+.results-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.results-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.delete-game-btn {
+  border: 1px solid rgba(190, 60, 60, 0.3);
+  background: rgba(190, 60, 60, 0.08);
+  color: #a33a3a;
+  padding: 7px 11px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.delete-game-btn:hover {
+  background: rgba(190, 60, 60, 0.16);
+}
+
+.delete-game-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 500px) {
+  .results-header {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .results-controls {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+  }
+
+  .delete-game-btn {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 500px) {
+  .results-header {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .results-controls {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+  }
+
+  .clear-results-btn {
+    font-size: 11px;
+  }
+}
