@@ -19,7 +19,7 @@ import {
 } from "./shared.js";
 
 
-let cardCount = 5;
+let cardCount = 3;
 
 
 /* -----------------------------------
