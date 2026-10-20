@@ -62,6 +62,17 @@ const savedGames =
 
 let resultListeners = [];
 
+function shuffleArray(array) {
+  const shuffled = [...array];
+
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+
+  return shuffled;
+}
 
 /* -----------------------------------
    CARD COUNT BUTTONS
@@ -82,11 +93,9 @@ document
           );
 
         button.classList.add("active");
+cardCount = Number(button.dataset.count);
 
-        cardCount =
-          Number(button.dataset.count);
-
-        renderMessageFields();
+renderMessageFields();
 
       }
     );
@@ -189,7 +198,6 @@ generateBtn.addEventListener(
     const game =
       readGameForm();
 
-
     const hasEmptyMessage =
       game.messages.some(
         message => !message
@@ -205,6 +213,7 @@ generateBtn.addEventListener(
       return;
 
     }
+const shuffledCards = shuffleArray(game.messages);
 
 
     generateBtn.disabled = true;
@@ -230,8 +239,8 @@ generateBtn.addEventListener(
         intro:
           game.intro,
 
-        cards:
-          game.messages,
+        cards: 
+           shuffledCards,
 
         createdAt:
           serverTimestamp()
